@@ -75,12 +75,21 @@ femm.mi_setblockprop(
   0, # num turns
 )
 #femm.mi_setgroup(n) # set group of selected item to n
-#femm.mi_getmaterial(
-#  magnetblock
-#)
-#femm.mi_selectlabel(
-#  labelbx,
-#  labelby
-#)
+femm.mi_getmaterial(
+  magnetblock
+)
+femm.mi_selectlabel(
+  labelbx,
+  labelby
+)
+femm.mi_setblockprop(
+  magnetblock,
+  1, # automesh
+  0, # meshsizeconstraint
+  None, # in circuit
+  90, #None, # magnetization angle
+  0, # group number
+  0, # num turns
+)
 import time
 time.sleep(100)
