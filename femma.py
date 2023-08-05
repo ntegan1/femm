@@ -74,6 +74,14 @@ femm.mi_setblockprop(
   0, # group number
   0, # num turns
 )
+# 7 layer 2.14 radius dirichlet iabc
+# for anti periodic set bdryformat 5, all other params 0
+#femm.mi_addboundprop('propname', 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0)
+#femm.mi_addboundprop(0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0)
+femm.mi_makeABC(
+  #n, R, x, y, bc
+  7, 2.12132, 0, 0, 0
+)
 femm.mi_clearselected()
 #femm.mi_setgroup(n) # set group of selected item to n
 femm.mi_getmaterial(
@@ -92,5 +100,7 @@ femm.mi_setblockprop(
   0, # group number
   0, # num turns
 )
+# TODO:
+# add around 0,1.5 air blockalbel
 import time
 time.sleep(100)
