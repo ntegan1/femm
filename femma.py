@@ -74,6 +74,7 @@ femm.mi_setblockprop(
   0, # group number
   0, # num turns
 )
+femm.mi_clearselected()
 #femm.mi_setgroup(n) # set group of selected item to n
 femm.mi_getmaterial(
   magnetblock
