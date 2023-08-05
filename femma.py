@@ -34,9 +34,15 @@ labelax = rectax1 + rectalen / 2.0
 labelay = rectay1 + rectalen / 2.0
 labelbx = rectbx1 + rectblen / 2.0 # TODO
 labelby = rectby1 + rectblen / 2.0 # TODO
+labelairx = 0
+labelairy = 1.5
 femm.mi_addblocklabel(
   labelax,
   labelay
+)
+femm.mi_addblocklabel(
+  labelairx,
+  labelairy
 )
 femm.mi_addblocklabel(
   rectbx1 + rectblen / 2.0,
@@ -97,6 +103,23 @@ femm.mi_setblockprop(
   0, # meshsizeconstraint
   None, # in circuit
   90, #None, # magnetization angle
+  0, # group number
+  0, # num turns
+)
+femm.mi_clearselected()
+femm.mi_getmaterial(
+  airblock
+)
+femm.mi_selectlabel(
+  labelairx,
+  labelairy
+)
+femm.mi_setblockprop(
+  airblock,
+  1, # automesh
+  0, # meshsizeconstraint
+  None, # in circuit
+  0, #None, # magnetization angle
   0, # group number
   0, # num turns
 )
