@@ -1,0 +1,14 @@
+# install wine64
+
+# allow install of python3
+winecfg /v win81
+
+# Download windows python version
+# install within wine
+I usually open c:\\windows\\explorer.exe
+and then navigate to the /home/{user}/Downloads
+# Download FEMM
+Install in wine
+c:\users\ntegan\AppData\Local\Programs\Python\Python311\python.exe
+python.exe -m pip install pyfemm
+
