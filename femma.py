@@ -3,7 +3,7 @@ import femm
 femm.openfemm()
 magneticsproblem = 0
 femm.newdocument(magneticsproblem)
-femm.showconsole()
+#femm.showconsole()
 #femm.clearconsole()
 
 rectax1 = 0.5
@@ -30,14 +30,19 @@ femm.mi_drawrectangle(
 )
 #femm.hidepointprops()
 
+labelax = rectax1 + rectalen / 2.0
+labelay = rectay1 + rectalen / 2.0
+labelbx = rectbx1 + rectblen / 2.0 # TODO
+labelby = rectby1 + rectblen / 2.0 # TODO
 femm.mi_addblocklabel(
-  rectax1 + rectalen / 2.0,
-  rectay1 + rectalen / 2.0
+  labelax,
+  labelay
 )
 femm.mi_addblocklabel(
   rectbx1 + rectblen / 2.0,
   rectby1 + rectblen / 2.0
 )
+
 
 # x axis
 femm.mi_drawline(
@@ -48,5 +53,34 @@ femm.mi_drawline(
   0, -1., 0, 1.
 )
 
+airblock='Air'
+polepieceblock='416 Stainless Steel'
+steelblock='1006 Steel'
+magnetblock='NdFeB 37 MGOe'
+femm.mi_seteditmode('blocks')
+femm.mi_getmaterial(
+  steelblock
+)
+femm.mi_selectlabel(
+  labelax,
+  labelay
+)
+femm.mi_setblockprop(
+  steelblock,
+  1, # automesh
+  0, # meshsizeconstraint
+  None, # in circuit
+  0, #None, # magnetization angle
+  0, # group number
+  0, # num turns
+)
+#femm.mi_setgroup(n) # set group of selected item to n
+#femm.mi_getmaterial(
+#  magnetblock
+#)
+#femm.mi_selectlabel(
+#  labelbx,
+#  labelby
+#)
 import time
-time.sleep(10)
+time.sleep(100)
