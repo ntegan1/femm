@@ -154,6 +154,16 @@ femm.mo_savebitmap(
 )
 
 import time
-time.sleep(5)
 femm.mo_close()
+
+femm.mi_movetranslate(0.0, -0.2)
+femm.mi_analyze(0) # visible 0
+femm.mi_loadsolution()
+time.sleep(5)
+img_num=img_num+1
+file = "img/" + str(img_num) + ".bmp"
+femm.mo_savebitmap(
+  file
+)
+time.sleep(5)
 time.sleep(100000)
