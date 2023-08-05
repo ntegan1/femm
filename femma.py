@@ -142,11 +142,11 @@ femm.mo_showdensityplot(
 #-.25, .64 tl
 # .82, 0. br
 
-img_num=3
-file = str(img_num) + ".bmp"
+img_num=4
+file = "img/" + str(img_num) + ".bmp"
 femm.mo_savebitmap(
   file
 )
 
 import time
-time.sleep(100)
+time.sleep(100000)
