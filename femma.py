@@ -143,8 +143,8 @@ femm.mo_showdensityplot(
 # .82, 0. br
 # api is bl to tr
 # NEED TO FIX
-femm.mi_zoom(
-  -.25, 0., .82. .64
+femm.mo_zoom(
+  -.25, 0., .82, .64
 )
 
 img_num=4
