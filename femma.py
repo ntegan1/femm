@@ -141,6 +141,11 @@ femm.mo_showdensityplot(
 # zoom in proper
 #-.25, .64 tl
 # .82, 0. br
+# api is bl to tr
+# NEED TO FIX
+femm.mi_zoom(
+  -.25, .64, .82. 0.
+)
 
 img_num=4
 file = "img/" + str(img_num) + ".bmp"
