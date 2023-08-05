@@ -4,7 +4,7 @@ femm.openfemm()
 magneticsproblem = 0
 femm.newdocument(magneticsproblem)
 femm.showconsole()
-femm.clearconsole()
+#femm.clearconsole()
 
 rectax1 = 0.5
 rectay1 = 0.5
@@ -48,3 +48,5 @@ femm.mi_drawline(
   0, -1., 0, 1.
 )
 
+import time
+time.sleep(10)

@@ -1,7 +1,3 @@
-script=""
-script+="import femm;"
-script+="femm.openfemm();"
-script+="femm.newdocument(0);"
-script+="import time;"
-script+="time.sleep(10);"
-wine64 c:\\users\\ntegan\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -c "$script"
+#!/bin/bash
+wine64 c:\\users\\ntegan\\AppData\\Local\\Programs\\Python\\Python311\\python.exe "$@"
+#wine64 c:\\users\\ntegan\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -c "$@"
