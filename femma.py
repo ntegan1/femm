@@ -147,11 +147,13 @@ femm.mo_zoom(
   -.25, 0., .82, .64
 )
 
-img_num=4
+img_num=5
 file = "img/" + str(img_num) + ".bmp"
 femm.mo_savebitmap(
   file
 )
 
 import time
+time.sleep(5)
+femm.mo_close()
 time.sleep(100000)
