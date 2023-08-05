@@ -129,15 +129,15 @@ femm.mi_analyze(0) # visible 0
 # current density props
 #0.000948046692546575
 #0.72
-#femm.mi_loadsolution()
-#femm.mo_showdensityplot(
-#  1, 0, 2.0, 0.05, 'bmag'
-#)
+femm.mi_loadsolution()
+femm.mo_showdensityplot(
+  1, 0, 2.0, 0.05, 'bmag'
+)
 
-#file = str(img_num) + ".bmp"
-#femm.mo_savebitmap(
-#  file
-#)
+file = str(img_num) + ".bmp"
+femm.mo_savebitmap(
+  file
+)
 
 import time
 time.sleep(100)
