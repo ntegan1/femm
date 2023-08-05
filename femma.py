@@ -2,7 +2,7 @@ import femm
 #-- 0mag,1ele,2hea,3curr
 femm.openfemm()
 magneticsproblem = 0
-img_num=2
+img_num=0
 femm.newdocument(magneticsproblem)
 #femm.showconsole()
 #femm.clearconsole()
@@ -137,7 +137,12 @@ femm.mi_loadsolution()
 femm.mo_showdensityplot(
   1, 0, .8, .13, 'bmag'
 )
+# TODO
+# zoom in proper
+#-.25, .64 tl
+# .82, 0. br
 
+img_num=3
 file = str(img_num) + ".bmp"
 femm.mo_savebitmap(
   file
